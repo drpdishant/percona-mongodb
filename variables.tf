@@ -1,5 +1,5 @@
 variable "aws_region" {
-  default = "ap-south-2"
+  default = "ap-south-1"
 }
 
 variable "instance_type" {
@@ -8,16 +8,16 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "Name of the SSH key pair"
-  default = "k811-devops-uat-dr"
+  default = "uat-mongo"
 }
 
 variable "subnet_id" {
   description = "ID of the subnet where the instance will be launched"
-  default = "subnet-00910459ee773610f"
+  default = ""
 }
 
 variable "volume_size" {
-  default = 1024  # 1TB volume size
+  default = 128 
 }
 
 variable "ami_id" {
@@ -31,9 +31,9 @@ variable "replicas" {
 }
 
 variable "bucket_name" {
-  default = "acqui-dr-mongo-backup"
+  default = "uat-mongo"
 }
 
 variable "environment" {
-  default = "uat-dr"
+  default = "uat"
 }
